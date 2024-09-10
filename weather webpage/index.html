@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="" id="error-msg"></div>
+    <div class="main-container"id="bg-blur">
+        <div class="first-flex-div">
+            <form style="width: 100%; position: relative;" id="cityName">
+                <input type="search" class="search" id="search" placeholder="Search City" autocomplete="off">
+                <button type="submit" class="btn" id="btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+            </form>
+            <div class="first-first-flex-div">
+                <div class="first-first-first-flex-div">
+                    <div>
+                        <div class="city" id="city">Karachi</div>
+                        <div class="country" id="country">Pakistan</div>
+                    </div>
+                    <div class="temperature" id="temperature">30<span role="button" id="tem-c" style="margin-left: 7px;">°C/<span role="button" id="tem-f" class="tem-opacity">F</span></div>
+                    <div class="date" id="last-update" style="font-size: 0.8rem;">Last update: 23:29</div>
+                    <div class="date" id="date" style="width: 300px;">Today Date: 2024-09-05 &nbsp; &nbsp; Current Time: 23:29</div>
+                    <!-- <div class="date" id="time" style="position: relative; left: -12px;">Current Time: 23:29</div> -->
+                </div>
+                
+                <div class="first-first-second-flex-div" id="temp-icon">
+                    <i class="fa-solid fa-sun fa-2xl" style="font-size: 3rem;"></i>
+                    <div class="sunny" id="sunny">sunny</div>
+                </div>
+
+            </div>
+            
+            <div class="first-second-flex-div">
+
+                <div class="first-second-first-flex-div">
+                    today's forcast
+                </div>
+
+                <div class="first-second-second-flex-div">
+                    <div class="time-forcast" id="time-1">
+                        <div class="time">06:00</div>
+                        <div id="time-forcast-icon-1"><i class="fa-solid fa-sun fa-lg"></i></div>
+                        <div class="time-forcast-temperature" id="time-forcast-temp-1">31°C</div>
+                    </div>
+                    <div class="VR"></div>
+
+                    <div class="time-forcast" id="time-2">
+                        <div class="time">06:00</div>
+                        <div id="time-forcast-icon-2"><i class="fa-solid fa-sun fa-lg"></i></div>
+                        <div class="time-forcast-temperature" id="time-forcast-temp-2">31°C</div>
+                    </div>
+                    <div class="VR"></div>
+
+                    <div class="time-forcast" id="time-3">
+                        <div class="time">06:00</div>
+                        <div id="time-forcast-icon-3"><i class="fa-solid fa-sun fa-lg"></i></div>
+                        <div class="time-forcast-temperature" id="time-forcast-temp-3">31°C</div>
+                    </div>
+                    <div class="VR"></div>
+
+                    <div class="time-forcast"  id="time-4">
+                        <div class="time">06:00</div>
+                        <div id="time-forcast-icon-4"><i class="fa-solid fa-sun fa-lg"></i></div>
+                        <div class="time-forcast-temperature" id="time-forcast-temp-4">31°C</div>
+                    </div>
+                    <div class="VR"></div>
+
+                    <div class="time-forcast" id="time-5">
+                        <div class="time">06:00</div>
+                        <div id="time-forcast-icon-5"><i class="fa-solid fa-sun fa-lg"></i></div>
+                        <div class="time-forcast-temperature" id="time-forcast-temp-5">31°C</div>
+                    </div>
+                    <div class="VR"></div>
+
+                    <div class="time-forcast" id="time-6">
+                        <div class="time">06:00</div>
+                        <div id="time-forcast-icon-6"><i class="fa-solid fa-sun fa-lg"></i></div>
+                        <div class="time-forcast-temperature" id="time-forcast-temp-6">31°C</div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="first-third-flex-div">
+
+                <div class="first-third-first-flex-div">
+                    Air Conditions
+                </div>
+
+                <div class="first-third-second-flex-div">
+
+                    <div class="first-third-second-first-flex-div">
+                        <div class="idk">
+                            <!-- <i class="fa-light fa-temperature-three-quarters fa-lg"></i> -->
+                            <svg width="32px" height="32px" viewBox="0 0 32 32" fill="#fff" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path fill="currentColor" d="M13 17.26V6a4 4 0 0 0-8 0v11.26a7 7 0 1 0 8 0zM9 4a2 2 0 0 1 2 2v7H7V6a2 2 0 0 1 2-2zm0 24a5 5 0 0 1-2.5-9.33l.5-.28V15h4v3.39l.5.28A5 5 0 0 1 9 28zM20 4h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7z"/></g></svg></svg>
+                            <div class="third">
+                                <div>Real Feel</div>
+                                <div class="idk-temperature" id="real-feel">31°C</div>
+                            </div>
+                        </div>
+                        <div class="idk">
+                            <i class="fa-solid fa-cloud fa-xl"></i>
+                            <div class="third">
+                                <div>Cloud Cover</div>
+                                <div class="idk-temperature" id="cloud">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="first-third-second-first-flex-div">
+                        <div class="idk">
+                            <svg width="30px" height="36px" viewBox="0 0 16 16" fill="#fff" x="238.5" y="238.5" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path fill="currentColor" d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1a.5.5 0 0 1-1 0a2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3a.5.5 0 0 1 1 0a2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/></g></svg></svg>
+                            <div class="third">
+                                <div>Wind</div>
+                                <div class="idk-temperature" id="wind" style="width: 64px;">0.2 km/h</div>
+                            </div>
+                        </div>
+                        <div class="idk">
+                            <i class="fa-solid fa-droplet fa-xl"></i>
+                            <div class="third">
+                                <div>Humidity</div>
+                                <div class="idk-temperature" id="humidity">57 %</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="first-third-second-first-flex-div">
+                        
+                        <div class="idk">
+                            <svg width="30px" height="35px" viewBox="0 0 512 512" fill="#fff" x="238.5" y="238.5" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path fill="currentColor" d="M425.706 142.294A240 240 0 0 0 16 312v88h144v-32H48v-56c0-114.691 93.309-208 208-208s208 93.309 208 208v56H352v32h144v-88a238.432 238.432 0 0 0-70.294-169.706Z"/><path fill="currentColor" d="M80 264h32v32H80zm160-136h32v32h-32zm-104 40h32v32h-32zm264 96h32v32h-32zm-102.778 71.1l69.2-144.173l-28.85-13.848l-69.183 144.135a64.141 64.141 0 1 0 28.833 13.886ZM256 416a32 32 0 1 1 32-32a32.036 32.036 0 0 1-32 32Z"/></g></svg></svg>
+                            <div class="third">
+                                <div>Pressure</div>
+                                <div class="idk-temperature" id="pressure">2956 mb</div>
+                            </div>
+                        </div>
+                        <div class="idk">
+                            <svg width="35px" height="35px" viewBox="0 0 36 36" fill="#fff" x="238.5" y="238.5" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path fill="currentColor" d="M18.05 33.61a1 1 0 0 1-1-1V3.37a1 1 0 1 1 1.95 0v29.26a1 1 0 0 1-.95.98Z" class="clr-i-outline clr-i-outline-path-1"/><path fill="currentColor" d="m18.06 10.07l-3.54-3.53a1 1 0 0 1 0-1.41a1 1 0 0 1 1.41 0l2.13 2.12l2.12-2.12a1 1 0 0 1 1.41 0a1 1 0 0 1 0 1.41Z" class="clr-i-outline clr-i-outline-path-2"/><path fill="currentColor" d="M20.85 31.17a1 1 0 0 1-.7-.29L18 28.76l-2.1 2.12a1 1 0 0 1-1.41 0a1 1 0 0 1 0-1.42L18 25.93l3.54 3.53a1 1 0 0 1 0 1.42a1 1 0 0 1-.69.29Z" class="clr-i-outline clr-i-outline-path-3"/><path fill="currentColor" d="M30.92 26.5a1 1 0 0 1-.5-.13l-26-15A1 1 0 0 1 4.07 10a1 1 0 0 1 1.37-.36l26 15a1 1 0 0 1-.5 1.87Z" class="clr-i-outline clr-i-outline-path-4"/><path fill="currentColor" d="M6 15.37a1 1 0 0 1-.26-2l2.9-.78l-.8-2.86a1 1 0 1 1 1.93-.52l1.3 4.79l-4.83 1.33a.82.82 0 0 1-.24.04Z" class="clr-i-outline clr-i-outline-path-5"/><path fill="currentColor" d="M27.05 27.54a1 1 0 0 1-1-.75L24.8 22l4.82-1.3a1 1 0 1 1 .52 1.93l-2.9.78l.78 2.9a1 1 0 0 1-.71 1.22a.75.75 0 0 1-.26.01Z" class="clr-i-outline clr-i-outline-path-6"/><path fill="currentColor" d="M4.94 26.5a1 1 0 0 1-.5-1.87l26-15a1 1 0 0 1 1.36.36a1 1 0 0 1-.36 1.37l-26 15a1 1 0 0 1-.5.14Z" class="clr-i-outline clr-i-outline-path-7"/><path fill="currentColor" d="M8.81 27.54a.75.75 0 0 1-.26 0a1 1 0 0 1-.71-1.22l.78-2.9l-2.9-.78A1 1 0 0 1 5 21.38a1 1 0 0 1 1.23-.71L11.07 22l-1.3 4.82a1 1 0 0 1-.96.72Z" class="clr-i-outline clr-i-outline-path-8"/><path fill="currentColor" d="M29.88 15.37a.82.82 0 0 1-.26 0L24.8 14l1.29-4.83a1 1 0 1 1 1.91.56l-.78 2.89l2.9.78a1 1 0 0 1-.26 2Z" class="clr-i-outline clr-i-outline-path-9"/><path fill="none" d="M0 0h36v36H0z"/></g></svg></svg>
+                            <div class="third">
+                                <div>Precipitation</div>
+                                <div class="idk-temperature" id="pricipitation">0 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="second-flex-div">
+            <div class="second-first-flex-div">
+                7-day forcast
+            </div>
+            
+            <div class="second-second-flex-div">
+                <div class="day-forcast" id="day-1">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-1">31°C</div>
+                </div>
+                <div class="HR"></div>
+                
+                <div class="day-forcast" id="day-2">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-2">31°C</div>
+                </div>
+                <div class="HR"></div>
+                
+                <div class="day-forcast" id="day-3">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-3">31°C</div>
+                </div>
+                <div class="HR"></div>
+                
+                <div class="day-forcast" id="day-4">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-4">31°C</div>
+                </div>
+                <div class="HR"></div>
+                
+                <div class="day-forcast" id="day-5">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-5">31°C</div>
+                </div>
+                <!-- <div class="HR"></div> -->
+                
+                <!-- <div class="day-forcast" id="day-6">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-6">31°C</div>
+                </div>
+                <div class="HR"></div>
+                
+                <div class="day-forcast" id="day-7">
+                    <div>Today</div>
+                    <i class="fa-solid fa-sun fa-lg"></i>
+                    <div>sunny</div>
+                    <div id="day-temp-7">31°C</div>
+                </div> -->
+                <!-- <div class="HR"></div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
